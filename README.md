@@ -1,4 +1,8 @@
-# rclone_sync
+# Rclone One-Way Project Backup
+
+![Maintenance](https://img.shields.io/badge/Status-Maintenance-green)
+![Languages](https://img.shields.io/badge/Languages-PowerShell-blue)
+
 Script for syncing local projects to Google Drive using rclone.[^1][^2]
 
 ## Overview
@@ -28,7 +32,7 @@ $localProjectsRoot = "D:\\local_projects"
 ```
 
 ## Example logging setup
-Logs are stored under a `logs` folder next to the script with a timestamped filename:
+Logs are stored under a `logs` folder with a timestamped filename:
 
 ```powershell
 $repoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -55,9 +59,9 @@ foreach ($localPath in $localProjects) {
 ```
 
 ## Auto-detecting project folders
-When `$autoDiscoverProjects` is set to `$true`, the script lists all immediate subfolders under `D:\local_projects` and treats each one as a project to sync. This is a simple, zero-maintenance way to include every project directory without maintaining a manual list.
+When `$autoDiscoverProjects` is set to `$true`, the script lists all immediate subfolders under `D:\local_projects\active` and treats each one as a project to sync. This is a simple way to include every project directory without maintaining a manual list.
 
-If you only want specific projects, set `$autoDiscoverProjects` to `$false` and list the desired folders explicitly in the manual array. This also lets you exclude non-project folders like `logs`, `archive`, or scratch directories.
+If you only want specific projects, set `$autoDiscoverProjects` to `$false` and list the desired folders explicitly in the manual array. This also lets you exclude folders within the project directory. 
 
 [^1]: https://rclone.org/
 [^2]: https://github.com/rclone/rclone
