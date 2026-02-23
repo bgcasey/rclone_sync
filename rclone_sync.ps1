@@ -1,5 +1,5 @@
 # ---
-# title: Rclone sync script
+# title: Rclone sync
 # author: Brendan Casey
 # created: 2026-02-23
 # inputs: Local project folders, gdrive remote
@@ -21,7 +21,7 @@ $runSetupChecks = $false
 # Set runtime toggles and discovery behavior.
 # $dryRun: Preview changes without syncing.
 # Set to $false to perform actual sync.
-$dryRun = $true
+$dryRun = $false
 
 # $autoDiscoverProjects: Auto-discover projects in
 # $localProjectsRoot. Set to $true to use auto-discovery
@@ -30,7 +30,7 @@ $autoDiscoverProjects = $true
 
 # $localProjectsRoot: Root directory for auto-discovery
 # of project folders.
-$localProjectsRoot = "D:\local_projects"
+$localProjectsRoot = "D:\local_projects\active"
 
 ## 1.2 Rclone setup checks ----
 # Validate the gdrive remote configuration.
@@ -69,12 +69,12 @@ $localProjects = if ($autoDiscoverProjects) {
     Select-Object -ExpandProperty FullName
 } else {
   @(
-    # "D:\local_projects\rclone_sync"
-    # "D:\local_projects\sciCentRverse"
-    # "D:\local_projects\utilR"
-    # "D:\local_projects\wildland_foundations_site_selection"
-    # "D:\local_projects\geospatial_preprocessing_and_extraction_toolkit"
-    # "D:\local_projects\InteriorHabitat"
+    # "D:\local_projects\active\rclone_sync"
+    # "D:\local_projects\active\sciCentRverse"
+    # "D:\local_projects\active\utilR"
+    # "D:\local_projects\active\wildland_foundations_site_selection"
+    # "D:\local_projects\active\geospatial_preprocessing_and_extraction_toolkit"
+    # "D:\local_projects\active\InteriorHabitat"
     # "D:\local_projects\invasive_species_indicator"
     # "D:\local_projects\local_backup"
     "D:\local_projects\NativeCover"
@@ -96,7 +96,4 @@ foreach ($localPath in $localProjects) {
     @rcloneFlags
 }
 
-
-  
-
-
+# End of script ----
