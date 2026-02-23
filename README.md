@@ -1,5 +1,5 @@
 # rclone_sync
-Script for syncing local projects to Google Drive using rclone.<sup>1</sup><sup>2</sup>
+Script for syncing local projects to Google Drive using rclone.[^1][^2]
 
 ## Overview
 This repository contains a PowerShell script that performs one-way syncs from local project folders to a Google Drive remote using `rclone`. It supports dry runs, optional remote checks, auto-discovery of local projects, and timestamped logging.
