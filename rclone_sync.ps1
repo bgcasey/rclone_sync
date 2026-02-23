@@ -11,14 +11,13 @@
 
 # 1. Setup ----
 
-## 1.1 Rclone setup checks ----
-# Validate the gdrive remote configuration.
-# Set using rclone's native Google Drive backend (gdrive remote)
-# Check gdrive remote configuration:
-rclone config show gdrive
-rclone lsf gdrive: --dirs-only
+# 1.1 Toggles ----
 
-# 1.2 Toggles ----
+# $runSetupChecks: Run setup validation checks before syncing.
+# Set to $true to verify gdrive remote configuration and list
+# available directories. Set to $false to skip checks.
+$runSetupChecks = $false
+
 # Set runtime toggles and discovery behavior.
 # $dryRun: Preview changes without syncing.
 # Set to $false to perform actual sync.
@@ -27,11 +26,21 @@ $dryRun = $true
 # $autoDiscoverProjects: Auto-discover projects in
 # $localProjectsRoot. Set to $true to use auto-discovery
 # instead of manual list.
-$autoDiscoverProjects = $false
+$autoDiscoverProjects = $true
 
 # $localProjectsRoot: Root directory for auto-discovery
 # of project folders.
 $localProjectsRoot = "D:\local_projects"
+
+## 1.2 Rclone setup checks ----
+# Validate the gdrive remote configuration.
+# Set using rclone's native Google Drive backend (gdrive remote)
+# Check gdrive remote configuration:
+# $runSetupChecks: Run these commands before syncing.
+if ($runSetupChecks) {
+  rclone config show gdrive
+  rclone lsf gdrive: --dirs-only
+}
 
 $repoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 
@@ -79,6 +88,8 @@ $localProjects = if ($autoDiscoverProjects) {
 foreach ($localPath in $localProjects) {
   $projectName = Split-Path -Leaf $localPath
   $remotePath = "gdrive:1_projects/active/$projectName/main"
+
+  Write-Host "Syncing $projectName..."
 
   rclone sync $localPath `
     $remotePath `
