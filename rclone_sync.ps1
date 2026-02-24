@@ -105,15 +105,15 @@ $localProjects = if ($autoDiscoverProjects) {
   @(
     # "D:\local_projects\active\rclone_sync"
     # "D:\local_projects\active\sciCentRverse"
-    "D:\local_projects\active\utilR"
+    # "D:\local_projects\active\utilR"
     # "D:\local_projects\active\wildland_foundations_site_selection"
     # "D:\local_projects\active\geospatial_preprocessing_and_extraction_toolkit"
     # "D:\local_projects\active\InteriorHabitat"
-    # "D:\local_projects\active\invasive_species_indicator"
+    "D:\local_projects\active\invasive_species_indicator"
     # "D:\local_projects\active\local_backup"
-    "D:\local_projects\active\NativeCover"
+    # "D:\local_projects\active\NativeCover"
     # "D:\local_projects\active\pileated_woodpecker"
-    "D:\local_projects\active\private_utils"
+    # "D:\local_projects\active\private_utils"
   )
 }
 
