@@ -7,7 +7,7 @@ Scripts for syncing local projects to Google Drive and one-off copying from Goog
 
 ## Table of Contents
 - [Overview](#overview)
-- [`rclone_copy.ps1` (one-off copy)](#rclone_copyps1-one-off-copy)
+- [`rclone_copy.ps1`](#rclone_copyps1)
 - [`rclone_sync.ps1`](#rclone_syncps1)
 
 ## Overview
@@ -18,8 +18,8 @@ This repository contains PowerShell scripts for two one-way workflows:
 
 Both scripts support timestamped logs in `logs/`.
 
-## `rclone_copy.ps1` (one-off copy)
-Use `rclone_copy.ps1` when you want a pull operation from Google Drive to local without deleting local files.
+## `rclone_copy.ps1`
+Use `rclone_copy.ps1` when you want a one-off pull operation from Google Drive to local without deleting local files.
 
 ### What it does
 `rclone_copy.ps1` runs `rclone copy` from a user-defined source path to a user-defined destination path.
