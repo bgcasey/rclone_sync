@@ -1,4 +1,4 @@
-# Rclone One-Way Project Backup
+# Rclone Sync and Copy Workflows
 
 ![Maintenance](https://img.shields.io/badge/Status-Maintenance-green)
 ![Languages](https://img.shields.io/badge/Languages-PowerShell-blue)
@@ -13,7 +13,7 @@ This repository contains PowerShell scripts for two one-way workflows:
 
 Both scripts support timestamped logs in `logs/`.
 
-## rclone_copy.ps1 (one-off copy)
+## `rclone_copy.ps1` (one-off copy)
 Use `rclone_copy.ps1` when you want a pull operation from Google Drive to local without deleting local files.
 
 ### What it does
@@ -58,7 +58,7 @@ pwsh -File .\rclone_copy.ps1
 
 Tip: start with `$dryRun = $true`, review the log, then set `$dryRun = $false`.
 
-## rclone_sync.ps1
+## `rclone_sync.ps1`
 
 ### Example configuration
 Toggle setup checks, dry run behavior, and project discovery:
