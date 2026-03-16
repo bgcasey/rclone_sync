@@ -28,8 +28,7 @@ $createDestinationIfMissing = $true
 #   "gdrive:Shared Drives/MySharedDrive/project_exports"
 #   "gdrive:my_folder/subfolder"
 # $sourcePath = "gdrive:3_resources/data/gee_exports"
-$sourcePath = "\\abmi-data2\science\spatial_data\temp\scanfi_v2\SCANFI_additional_outputs_v2_20260119"
-
+$sourcePath = "\\abmi-data2\science\spatial_data\temp\scanfi_v2\SCANFI_attributes_v2_20260119"
 
 # $destinationPath: Local folder to copy files into.
 # $destinationPath = "\\abmi-data2\science\spatial_data\temp\scanfi_v2"
