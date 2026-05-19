@@ -65,6 +65,14 @@ Tip: start with `$dryRun = $true`, review the log, then set `$dryRun = $false`.
 
 ## `rclone_sync.ps1`
 
+### What it does
+`rclone_sync.ps1` runs `rclone sync` to mirror local project folders to Google Drive, making the remote match the local source.
+
+- Each local project maps to `gdrive:1_projects/active/<projectName>/main`.
+- Projects are auto-discovered under `$localProjectsRoot` or set explicitly in a manual list.
+- A `sync_manifest.json` tracks each project's last sync time so unchanged projects are skipped.
+- This is a one-way sync: files removed locally are also removed on the remote.
+
 ### Example configuration
 Toggle setup checks, dry run behavior, and project discovery:
 
