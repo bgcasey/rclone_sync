@@ -27,12 +27,12 @@ $createDestinationIfMissing = $true
 # Examples:
 #   "gdrive:Shared Drives/MySharedDrive/project_exports"
 #   "gdrive:my_folder/subfolder"
-# $sourcePath = "gdrive:3_resources/data/gee_exports"
-$sourcePath = "\\abmi-data2\science\spatial_data\temp\scanfi_v2\SCANFI_attributes_v2_20260119"
+# $sourcePath = "\\abmi-data2\science\spatial_data\temp\scanfi_v2\SCANFI_attributes_v2_20260119"
+$sourcePath = "gdrive:1_projects\active\harvestSeverity_birds"
 
 # $destinationPath: Local folder to copy files into.
 # $destinationPath = "\\abmi-data2\science\spatial_data\temp\scanfi_v2"
-$destinationPath = "D:\temp_spatial_data\scanfi_v2"
+$destinationPath = "D:\local_projects\active\harvestSeverity_birds"
 
 # 1.2 Optional setup checks ----
 if ($runSetupChecks) {
