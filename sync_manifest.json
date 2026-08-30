@@ -3,17 +3,18 @@
     "utilR":  "2026-02-24T09:49:12.0000000Z",
     "private_utils":  "2026-05-18T22:05:58.0344556Z",
     "NativeCover":  "2026-02-24T09:49:12.0000000Z",
+    "geospatial_catalog_and_management_guide":  "2026-08-25T11:38:37.8168580Z",
     "local_backup":  "2026-02-24T09:49:12.0000000Z",
     "project_template":  "2026-08-18T19:24:10.9316376Z",
     "code_standards":  "2026-08-18T14:35:06.6436604Z",
-    "invasive_species_indicator":  "2026-08-21T14:39:37.3309277Z",
+    "invasive_species_indicator":  "2026-08-25T16:33:33.2361048Z",
     "rclone_sync":  "2026-02-24T09:49:12.0000000Z",
-    "gee_python_toolkit":  "2026-08-22T11:56:25.5955056Z",
+    "pileated_woodpecker":  "2026-07-06T07:12:15.4736382Z",
     "sciCentRverse":  "2026-02-24T09:49:12.0000000Z",
     "InteriorHabitat":  "2026-02-24T09:49:12.0000000Z",
     "gee_toolbox":  "2026-02-27T13:41:07.6227869Z",
     "wildland_foundations":  "2026-02-24T10:11:02.8054690Z",
-    "geospatial_preprocessing_and_extraction_toolkit":  "2026-07-12T20:17:02.5687762Z",
+    "gee_python_toolkit":  "2026-08-25T11:36:09.6762900Z",
     "sciSpatialR":  "2026-08-18T19:29:03.1923309Z",
-    "pileated_woodpecker":  "2026-07-06T07:12:15.4736382Z"
+    "geospatial_preprocessing_and_extraction_toolkit":  "2026-07-12T20:17:02.5687762Z"
 }
